@@ -7,5 +7,6 @@ router.get('/', Controller.getAll);
 router.get('/:_id', Controller.getOne);
 router.put('/:_id', Controller.update);
 router.delete('/:_id', Controller.delete);
+router.put('/menu/:id', Controller.menu);
 
 module.exports = router;

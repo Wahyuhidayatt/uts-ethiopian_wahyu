@@ -7,7 +7,8 @@ methods.create = (req, res) => {
     name : req.body.name,
     owner : req.body.owner,
     address : req.body.address,
-    open_status : req.body.open_status
+    open_status : req.body.open_status,
+    menu : []
   })
   .then(function (err, data) {
     if(err){
@@ -69,5 +70,20 @@ methods.delete = (req, res) => {
     res.send(response);
   });
 }
+
+//Ambil bonus//
+methods.menu = (req, res) => {
+  Restaurant.findByIdAndUpdate(req.params.id,
+    { $push: { "menu": req.body.menu_id} },
+    {safe: true, upsert: true, new: true},
+    function (err, data) {
+      if (err) {
+        res.json(err)
+      }else{
+        res.json({data: data})
+      }
+  })
+}
+
 
 module.exports = methods
