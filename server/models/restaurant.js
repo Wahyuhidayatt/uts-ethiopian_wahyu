@@ -1,6 +1,6 @@
 'use strict'
 
-const mongoose = require('mongoose');
+const Mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let schemaRestaurant = new Schema ({
@@ -10,6 +10,6 @@ let schemaRestaurant = new Schema ({
   open_status : Boolean
 })
 
-let Restaurant = mongoose.model('Restaurant', schemaRestaurant);
+let Restaurant = Mongoose.model('Restaurant', schemaRestaurant);
 
 module.exports = Restaurant;

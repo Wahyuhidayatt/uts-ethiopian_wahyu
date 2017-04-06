@@ -1,23 +1,21 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose')
-
-
-var restaurants = require('./routes/restaurants');
-var foods = require('./routes/foods');
-
 var app = express();
 
-mongoose.connect('mongodb://localhost/listdummy');
+// var restaurants = require('../routes/restaurant');
+var foods = require('./routes/foods');
+
+mongoose.connect('mongodb://localhost/uts_wahyu');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.listen(3000)
 
-app.use('/',restaurants)
+// app.use('/api/restaurant',restaurants);
+app.use('/api/food', foods);
 
-app.use('/api', foods);
 
 
 module.exports = app

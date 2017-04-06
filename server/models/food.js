@@ -1,14 +1,14 @@
 'use strict'
 
 const Mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Schema = Mongoose.Schema;
 
 let schemaFoods = new Schema ({
   name : String,
   price : Number,
-  expired_date : new Date()
+  expired_date : Date
 })
 
-let Food = mongoose.model('Food', schemaFoods);
+let Food = Mongoose.model('Food', schemaFoods);
 
 module.exports = Food;
