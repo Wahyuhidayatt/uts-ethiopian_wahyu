@@ -20,6 +20,7 @@ methods.create = (req, res) => {
 }
 methods.getAll = (req, res) => {
   Restaurant.find()
+  .populate('menu')
   .then(function(err, data) {
     if(err){
       res.send(err)
