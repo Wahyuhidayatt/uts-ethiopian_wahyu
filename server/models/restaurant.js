@@ -1,7 +1,7 @@
 'use strict'
 
 const Mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Schema = Mongoose.Schema;
 
 let schemaRestaurant = new Schema ({
   name : String,
