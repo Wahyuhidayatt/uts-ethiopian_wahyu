@@ -5,7 +5,7 @@ npm install
 nodemon server/app.js
 
 
-#Features restaurant!
+# Features restaurant!
 
 Route | HTTP | Description
 ------------ | ------------- | ------------
@@ -16,7 +16,7 @@ Route | HTTP | Description
 /api/restaurant/:id | DELETE | Delete restaurant
 
 
-#Features foods!
+# Features foods!
 
 Route | HTTP | Description
 ------------ | ------------- | ------------
